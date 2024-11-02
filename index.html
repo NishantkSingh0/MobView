@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proctoring System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Mobile Camera View</h1>
+    </div>
+
+    <div class="main-container">
+        <div class="camera-container">
+            <div class="video-wrapper">
+                <video id="videoElement" autoplay playsinline></video>
+            </div>
+            <div class="controls">
+                <button class="start-btn" id="startButton">Start Camera</button>
+                <button class="stop-btn" id="stopButton" disabled>Stop Camera</button>
+            </div>
+            <div class="status" id="statusText">Camera is currently inactive</div>
+        </div>
+
+        <div class="detection-results">
+            <h2>Detection Results</h2>
+            <div id="detectionOutput">No unauthorized devices detected</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
